@@ -347,9 +347,9 @@ int UpdateCam( lua_State *L )
 	v3 center = add( eye, V3( frontX, frontY, frontZ ) );
 	LookAt(cam, eye, center, V3(0, 1, 0));
 	v3 dir = norm( sub( center, eye ) );
-	tgSetActiveShader( &simple );
-	tgSendF32( &simple, "u_eye", 1, (float*)&dir, 4 );
-	tgDeactivateShader( );
+	// tgSetActiveShader( &simple );
+	// tgSendF32( &simple, "u_eye", 1, (float*)&dir, 4 );
+	// tgDeactivateShader( );
 	UpdateMvp();
 	return 0;
 }
